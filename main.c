@@ -27,8 +27,13 @@ int main()
     p.win_height = 240;
     p.win_scale = 6;
 
+    unsigned short win_width = p.win_width << 10;
+    unsigned short win_height = p.win_height << 10;
+
     start_SDL(&p);
 
+    // Only the game logic will use the fixed point format. For drawing to the screen, I will
+    // stick to good old integers.
     p.screen_buffer[100*p.win_height + 100] = 0xFFE0; //sets pixel to cyan color on screen
 
     char running = 1;

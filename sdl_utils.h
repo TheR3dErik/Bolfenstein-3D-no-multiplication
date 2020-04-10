@@ -15,6 +15,7 @@ struct SDL_Package
     SDL_Texture* texture;
     unsigned short* screen_buffer;
 
+    //These will be kept as regular integers instead of fixed point decimals for the sake of convenience
     unsigned int win_width;
     unsigned int win_height;
     unsigned int win_scale;
